@@ -25,6 +25,9 @@ guessButton.addEventListener('click', () => {
   computerGuessDisplay.innerText = computerGuess;
   targetNumberDisplay.innerText = target;
   
+  //Determine if the human guess is a valid input
+  checkGuess(currentHumanGuess);
+
   // Determine if the human or computer wins:
   const humanIsWinner = compareGuesses(currentHumanGuess, computerGuess, target)
   const winner = humanIsWinner ? 'human' : 'computer'
